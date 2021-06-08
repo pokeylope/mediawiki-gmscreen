@@ -1,0 +1,57 @@
+{
+	"name": "GmScreen",
+	"author": "Mark Karasek",
+	"url": "https://github.com/pokeylope/mediawiki-gmscreen",
+	"descriptionmsg": "gmscreen-desc",
+	"version": "1.0",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.32.0"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\GmScreen\\": "includes/"
+	},
+	"config": {
+		"GmScreenNamespace": {
+			"description": "Namespace for GM pages",
+			"value": 0
+		},
+		"GmScreenText": {
+			"description": "Label for GM tab",
+			"value": "GM"
+		},
+		"GmScreenEmbedPage": {
+			"description": "Embed GM page",
+			"value": true
+		}
+	},
+	"HookHandlers": {
+		"GmScreenHooks": {
+			"class": "MediaWiki\\Extension\\GmScreen\\Hooks"
+		}
+	},
+	"Hooks": {
+		"BeforePageDisplay": "GmScreenHooks",
+		"ChangesListSpecialPageQuery": "GmScreenHooks",
+		"SkinTemplateNavigation::Universal": "GmScreenHooks"
+	},
+	"MessagesDirs": {
+		"GmScreen": [
+			"i18n"
+		]
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "GmScreen/resources"
+	},
+	"ResourceModules": {
+		"ext.gmScreen": {
+			"dependencies": [],
+			"messages": [],
+			"styles": [],
+			"scripts": []
+		}
+	},
+	"manifest_version": 2
+}
