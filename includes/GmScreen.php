@@ -79,7 +79,8 @@ class GmScreen {
 		}
 		$wikiPage = WikiPage::newFromId($id);
 
-		$out->addHTML('<div style="background-color: #e8f2f8;">');
+		$out->addModuleStyles('ext.gmScreen');
+		$out->addHTML('<div class="gmscreen-embed">');
 		$out->addHTML('<h1><span class="mw-headline">' . $this->gm_text . '</span>');
 		$out->addHTML('<span class="mw-editsection"><span class="mw-editsection-bracket">[</span>');
 		$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();

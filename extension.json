@@ -49,7 +49,9 @@
 		"ext.gmScreen": {
 			"dependencies": [],
 			"messages": [],
-			"styles": [],
+			"styles": [
+				"ext.gmScreen.css"
+			],
 			"scripts": []
 		}
 	},
